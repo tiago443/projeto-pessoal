@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #b8b8b8;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  height: 800px;
+  margin: 50px auto;
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20240329/pngtree-rows-of-dumbbells-in-the-gym-image_15662386.jpg');
+  background-size: cover;
+  background-position: center;
+  border: 3px solid;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+/* Sobreposição para legibilidade */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(150, 150, 150, 0.9);
+  border-radius: 5px;
+  z-index: 0;
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+  z-index: 1; /* Conteúdo acima do fundo */
+}
+
+h1, input, label, button, p {
+  position: relative;
+  z-index: 1;
+}
+input, button{
+    cursor: pointer;
+}
